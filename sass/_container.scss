@@ -1,0 +1,120 @@
+.container {
+  max-width: 60%;
+  margin: 10rem auto;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  grid-template-rows: 45% 1fr;
+  @media only screen and (max-width: $bp-phone) {
+    max-width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+  }
+}
+
+.heading-1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: $color-blue;
+  padding-bottom: 2rem;
+}
+
+.community {
+  grid-column: 1 / span 2;
+  padding: 5rem;
+  background-color: #fff;
+  @media only screen and (max-width: $bp-phone) {
+    grid-row-start: 1;
+  }
+
+  &__heading-2 {
+    color: $color-yellow;
+    padding-bottom: 1rem;
+  }
+
+  &__text {
+    color: $color-gray-blue;
+  }
+}
+
+.subscription {
+  padding: 5rem;
+  background-color: $color-blue;
+  @media only screen and (max-width: $bp-phone) {
+    grid-row-start: 2;
+  }
+
+  &__heading-2 {
+    color: $color-gray;
+    padding-bottom: 1rem;
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 1.5rem;
+  }
+
+  &__month {
+    color: rgba($color-gray, 0.8);
+  }
+
+  &__text {
+    color: $color-gray;
+  }
+}
+
+.btn:link,
+.btn:visited {
+  display: block;
+  margin-top: 5rem;
+  padding: 1.5rem 3rem;
+  background-color: $color-yellow;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(#000, 0.3);
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #fff;
+    color: $color-yellow;
+    transform: translateY(-1rem);
+    box-shadow: 0 1.5rem 3rem rgba(#000, 0.3);
+  }
+
+  &:active {
+    transform: translateY(1rem);
+    box-shadow: 0 1rem 2rem rgba(#000, 0.3);
+  }
+}
+
+.about {
+  padding: 5rem;
+  background-color: $color-blue-light;
+  @media only screen and (max-width: $bp-phone) {
+    grid-row-start: 3;
+  }
+
+  &__heading-2 {
+    color: $color-gray;
+    padding-bottom: 1rem;
+  }
+
+  &__text {
+    color: rgba($color-gray, 0.8);
+    padding-top: 1rem;
+  }
+}
